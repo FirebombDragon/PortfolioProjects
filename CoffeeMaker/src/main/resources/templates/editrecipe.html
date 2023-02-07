@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>View Recipes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+	<h1>Coffee Recipes</h1>
+	<div layout:fragment="content">
+
+		<script> 
+    /*<![CDATA[*/
+		var app = angular.module('myApp', []);
+		app.controller('editRecipeCtrl', function($scope, $http, $q) {
+			
+			function updateRecipes() {
+				$http.get("/api/v1/recipes").then(function (response) {
+	  				$scope.recipes = response.data;
+	  			});
+			}
+			
+  			updateRecipes();
+		});
+	/*]]>*/
+	</script>
+
+		<div ng-app="myApp" ng-controller="editRecipeCtrl">
+			<ul>
+				<li ng-repeat="recipe in recipes"><label>{{recipe.name}}
+						<input type="radio" ng-model="chosenrecipe" name="name"
+						value="{{recipe.name}}" required="true" />
+				</label></li>
+			</ul>
+			<br /> <a href="/editcustomrecipe?rec=chosenrecipe" ng-if="recipes.length > 0">Edit This Recipe</a>
+
+			<div ng-if="0 >= recipes.length">There are no recipes in the
+				Coffee Maker.</div>
+
+
+		</div>
+		<a href="/index">Home</a>
+	</div>
+
+
+
+</body>
+</html>

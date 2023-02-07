@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add a Ingredient</title>
+<style>
+.username.ng-valid {
+	background-color: lightgreen;
+}
+
+.username.ng-dirty.ng-invalid-required {
+	background-color: red;
+}
+
+.username.ng-dirty.ng-invalid-min {
+	background-color: yellow;
+}
+
+.email.ng-valid {
+	background-color: lightgreen;
+}
+
+.email.ng-dirty.ng-invalid-required {
+	background-color: red;
+}
+</style>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+
+	<script>
+		/*<![CDATA[*/
+		var app = angular.module('myApp', []);
+		app.controller('addIngredientCtrl', function($scope, $http, $q) {
+			console.log("Hit!");
+
+			$scope.reset = function() {
+				$scope.ingredient = {
+					ingredient : '',
+					amount : ''
+				};
+				$scope.inventory = {
+						ingredients : []
+				};
+				if (undefined != $scope.addIngredientForm) {
+					$scope.addIngredientForm.$setPristine(); // reset Form
+				}
+			}
+			
+			$scope.inventory = {
+					ingredients : []
+			};
+			
+			$scope.getInventory = function() {
+				$http.get("/api/v1/inventory").then(function(response) {
+					$scope.inventory = response.data;
+				}, function(rejection) {
+					console.error("Error while getting Inventory");
+				})
+			}
+
+			$scope.submit = function() {
+				$scope.addIngredient();
+				$scope.reset();
+			}
+
+			$scope.addIngredient = function() {
+				$scope.addIng = $scope.ingredient;
+				console.log($scope.addIng);
+				$scope.addIngredientToInventory();
+			}
+			
+			$scope.addIngredientToInventory = function() {
+				$scope.success = false;
+				$scope.failure = false;
+				var ing = $scope.addIng.ingredient;
+				var amt = $scope.addIng.amount;
+				console.log($scope.addIng);
+				console.log(ing + " with amount " + amt);
+				$scope.inventory.ingredients.push( $scope.addIng );
+				console.log($scope.inventory.ingredients);
+				$http.put("/api/v1/inventory", $scope.inventory).then(
+					function(success) {
+						$scope.success = true;
+						$scope.failure = false;
+					}, function(rejection) {
+						$scope.failure = true;
+						console.error("Error while adding to inventory");
+					}	
+				)
+				$scope.reset()
+			}
+
+			$scope.reset();
+			$scope.getInventory();
+
+		});
+		/*]]>*/
+	</script>
+
+
+
+	<div ng-app="myApp" class="generic-container ng-cloak"
+		ng-controller="addIngredientCtrl as ctrl">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="lead">Add an Ingredient</span>
+			</div>
+
+			<div class="formcontainer">
+				<form ng-submit="submit()" name="addIngredientForm"
+					class="form-horizontal">
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="file">Name</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="ingredient.ingredient" name="ingredient"
+									class="ingredient form-control input-sm"
+									placeholder="Enter ingredient ingredient" required="0" />
+								<div class="has-error" ng-show="addIngredientForm.$dirty">
+									<span ng-show="addIngredientForm.name.$error.required">This
+										is a required field</span> <span
+										ng-show="addIngredientForm.name.$invalid">This field is
+										invalid </span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="file">amount</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="ingredient.amount" name="amount"
+									class="amount form-control input-sm"
+									placeholder="Enter ingredient amount" required="0" />
+								<div class="has-error" ng-show="addIngredientForm.$dirty">
+									<span ng-show="addIngredientForm.amount.$error.required">This
+										is a required field</span> <span
+										ng-show="addIngredientForm.amount.$error.min">Minimum amount
+										is 0</span> <span ng-show="addIngredientForm.amount.$invalid">This
+										field is invalid </span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Submit"
+								class="btn btn-primary btn-sm"
+								ng-disabled="addIngredientForm.$invalid" />
+							<button type="button" ng-click="reset()"
+								class="btn btn-warning btn-sm"
+								ng-disabled="addIngredientForm.$pristine">Reset Form</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div ng-show="success">Ingredient added</div>
+			<div ng-show="failure">Error while adding Ingredient to inventory.</div>
+		</div>
+
+		<a href="/index">Home</a>
+	</div>
+
+
+
+</body>
+</html>
