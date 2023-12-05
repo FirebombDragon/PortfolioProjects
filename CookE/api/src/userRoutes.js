@@ -31,7 +31,7 @@ userRouter.post('/users', (req, res) => {
                     res.status(400).json({error: err});
                 }
                 const digest = derivedKey.toString('hex');
-                db.query('INSERT INTO user (username, salt, password) VALUES (?, ?, ?)', [req.body.username, salt, digest]).then(({results}) => {
+                db.query('INSERT INTO user (username, salt, password, first_name, last_name, email) VALUES (?, ?, ?, ?, ?, ?)', [req.body.username, salt, digest, req.body.first, req.body.last, req.body.email]).then(({results}) => {
                     db.query('SELECT * FROM user WHERE user_id = ?', [results.insertId]).then(({results}) => {
                         res.json(new User(results[0]));
                     });

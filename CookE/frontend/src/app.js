@@ -37,6 +37,10 @@ app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/templates/registration.html');
 });
 
+app.get('/account',(req, res) => {
+    res.sendFile(__dirname + '/templates/account.html');
+});
+
 app.get('/offline', (req, res) => {
     res.sendFile(__dirname + '/templates/offline.html');
 });

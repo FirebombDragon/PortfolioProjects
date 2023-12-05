@@ -4,7 +4,10 @@ document.querySelector("form").addEventListener('submit', (e)=> {
     e.preventDefault();
     const user = document.getElementById("username").value;
     const pass = document.getElementById("password").value;
-    api.createUser(user, pass).then(user => {
+    const first = document.getElementById("firstName").value;
+    const last = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    api.createUser(user, pass, first, last, email).then(user => {
         if(user) {
             window.location = `/login`;
         }

@@ -3,12 +3,15 @@ CREATE TABLE IF NOT EXISTS `user` (
     `username` varchar(20) NOT NULL,
     `salt` varchar(32) NOT NULL,
     `password` varchar(128),
+    `first_name` varchar(20),
+    `last_name` varchar(20),
+    `email` varchar(30),
     PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELETE FROM `user`;
-INSERT INTO `user` (`user_id`, `username`, `salt`, `password`) VALUES
-    (1, 'student', 'vy6zt6ttguoxwt2rntr8tdn99wxrcv0h', 'd6ee915e0ef570ca68500d37adfb8f4309ea76b6da4ca529515c10f60c1c4a1ada5ef910ce93c27195e5cd905db9457782ca1ac10fd3bedf01ce0cbbb9125d82');
+INSERT INTO `user` (`user_id`, `username`, `salt`, `password`, `first_name`, `last_name`, `email`) VALUES
+    (1, 'student', 'vy6zt6ttguoxwt2rntr8tdn99wxrcv0h', 'd6ee915e0ef570ca68500d37adfb8f4309ea76b6da4ca529515c10f60c1c4a1ada5ef910ce93c27195e5cd905db9457782ca1ac10fd3bedf01ce0cbbb9125d82', 'Stu', 'Dent', 'student@email.com');
 
 CREATE TABLE IF NOT EXISTS `recipe` (
     `recipe_id` int(10) unsigned NOT NULL AUTO_INCREMENT,

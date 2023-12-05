@@ -1,11 +1,11 @@
 function log(...data) {
-    console.log("SWv1.0", ...data);
+    console.log("SWv1.1", ...data);
   }
   
   log("SW Script executing - adding event listeners");
   
   
-  const STATIC_CACHE_NAME = 'cooke-static-v0';
+  const STATIC_CACHE_NAME = 'cooke-static-v1';
   
   self.addEventListener('install', event => {
     log('install', event);
@@ -19,6 +19,7 @@ function log(...data) {
           '/css/recipes.css',
           '/css/shopping.css',
           '/css/styles.css',
+          '/css/account.css',
           //Images
           '/images/CookE_logo_nav.png',
           //Scripts
@@ -29,6 +30,7 @@ function log(...data) {
           '/js/recipes.js',
           '/js/shopping.js',
           '/js/APIClient.js',
+          '/js/account.js',
           '/js/common.js',
           //External Resources
           'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',

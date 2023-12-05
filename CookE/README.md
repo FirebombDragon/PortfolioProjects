@@ -1,29 +1,25 @@
 # Cook-E
-## Group Q: Milestone 2
+## Group Q: Final Project
 
-### What is done
-<b>The following pages are completed: </b>
-- `recipelist.html`: Users can view a list of recipes
-- `shoppinglist.html`: Users can view a list of items in the shopping list
-- `viewrecipe.html`: Users can view an individual recipe (with a given recipe ID)
-- `addrecipe.html`: Users can view the page to create a new recipe, but the new recipe is not yet saved
-- `editrecipe.html`: Users can view the page to make changes to an individual recipe (with a given recipe ID), but the changes are not yet saved.<br>
-- `login.html`: The user can view the page to log in by entering their username and password.  User credentials are verified yet upon loging using tokens.
-- `registration.html`: The user can enter their first name, last name, username, and password, and a new user object will be created and signed into the application.
-<b>The following backend elements are completed: </b>
-- Database is set up
-- All required API endpoints are implemented and utilize the database
-- Users are authenticated using JWT tokens
-
-### What is not done
-<b>The following pages still need to be done:</b>
-- An account page that will allow users to see their account information
-
-<b>Offline Functionality:</b><br>
-The current implementation does not yet allow any offline functionality.  In the future, we will need to provide some offline functionality for certain features, such as viewing the shopping list.
+### Features
+Users can create accounts and log in to our application.  After logging in, they will see a list of recipes they have created.  They can view the details of these recipes to see the ingredients and instructions.  Users are able to edit their own recipes and create new ones.  When viewing a recipe, users can add ingredients from those recipes to a shopping list.  When viewing their shopping list, users are able to check off items as they purchase them.  Users can also view information about their account, such as their name and email.
 
 ### User Authentication
 Users are required to log in to the system by providing a username and password.  User information is stored in the database.  Stored passwords are securely hashed along with a salt that is also stored in the database.  When a user logs in, their password is hashed with the same salt and compared to the one in the database.  If they match, then the system will create a JWT token containing the current user and store it as a cookie.  To utilize any other page or API route for our system, the user's browser must provide a valid cookie.  Before performing any action, a middleware function ensures that the caller provides a valid cookie.
+
+### Pages
+<b>Login:</b> Users can provide their username and password to log in.  Click "Register" to create a new account.<br>
+<b>Register:</b> Create a new user profile by specifying name, email, username, and password.<br>
+<b>Account:</b> View user information.<br>
+<b>Recipe List:</b> Users can view a list of their recipes.  Click a recipe to view its details.  Click "Add Recipe" to create a new recipe.<br>
+<b>Recipe Page:</b> Users can view the ingredients and instructions for a recipe.  Click "Edit Recipe" to edit these details.  Click "Delete Recipe" to delete the recipe.<br>
+<b>Add Recipe:</b> Create a new recipe by specifying name, ingredients, and instructions.<br>
+<b>Edit Recipe:</b> Change a recipe by updating name, ingredients, or instructions.<br>
+<b>Shopping List:</b> View a list of items in the shopping list, or remove items from the list.<br>
+Users can navigate between Recipe List, Shopping List, and Account pages using the navbar at the top of all pages.  Click "Log out" on the navbar to log out.
+
+### Offline Functionality
+After a user has visited a page while online, they will be able to revisit that page if they go offline.  The shopping list page is fetched when the user logs in, so even if the user were to lose connection before visiting this page, they will still be able to see this list.  If an offline user attempts to visit another page that has not been visited previously, they will be redirected to a specific offline page.
 
 ### Implementation Status
 | Page | Progress | Wireframe |
@@ -35,7 +31,10 @@ Users are required to log in to the system by providing a username and password.
 | View Recipe | ✔ | |
 | Add Recipe | ✔ | |
 | Edit Recipe | ✔ | |
-| Account | 0% | [Wireframe](https://github.ncsu.edu/engr-csc342/csc342-2023Fall-GroupQ/blob/master/Proposal/Wireframes/Registration.png) (Right)|
+| Account | ✔ | |
+
+### Caching Strategy
+Our caching strategy is a hybrid approach.  For static resources, such as html and javascript files, we utilize a cache-first strategy.  Since these files are unlikely to change as a user uses our application, it is more efficient to store these requests in the cache for easier, repeated access.  For calls to our API, we utilize a netwrok-first strategy.  Since the data for our application is likely to change frequently as a user creates, edits, and deletes recipes and shopping list items, it requires that the system make calls to the API over the network to obtain the most recent data.
 
 ### API Endpoints:
 | Method | Route | Description |
@@ -57,10 +56,23 @@ Users are required to log in to the system by providing a username and password.
 ### Database ER Diagram
 ![ER Diagram](https://github.ncsu.edu/engr-csc342/csc342-2023Fall-GroupQ/blob/master/Milestone2/diagrams/Milestone%202%20ER%20Diagram.png)
 
-### Individual team member contributions to this milestone
+### Individual team member contributions for entire project
+<b><ins>Milestone 1:</ins></b><br>
+<b>Robbie:</b> Responsible for viewrecipe.html, addrecipe.html, and editrecipe.html, as well as any associated static files (javascript or css) and API endpoints.<br>
+<b>Nikolaus:</b> Responsible for recipelist.html and shoppinglist.html, as well as any associated static files (javascript or css) and API endpoints.<br>
+<b>Arjun:</b> Responsible for login.html, as well as any associated static files (javascript or css) and API endpoints. Also created wireframes for unimplemented pages.<br>
+All group members worked together on the report and screencast<br>
+
+<b><ins>Milestone 2:</ins></b><br>
 <b>Robbie</b>: Responsible for setting up the database and API routes for getting a recipe, adding a recipe, editing a recipe, logging in (using tokens), and logging out.<br>
 <b>Nikolaus</b>: Responsible for API endpoints relating to getting all recipes and all shopping list routes.<br>
-<b>Arjun</b>: Responsible for login.html and registration.html.
+<b>Arjun</b>: Responsible for login.html and registration.html.<br>
+All group members worked together on the report and screencast<br>
+
+<b><ins>Final Project:</ins></b><br>
+<b>Robbie</b>: Responsible for setting up the service worker and updating the User records in the database (and associated API routes) to store more information to be displayed on the account page<br>
+<b>Nikolaus</b>: Responsible for making the application installable<br>
+<b>Arjun</b>: Responsible for the account page<br>
 All group members worked together on the report and screencast
 
 

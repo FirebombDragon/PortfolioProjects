@@ -160,7 +160,7 @@ export default {
             return res.json();
         })
     },
-    createUser:(username, password) => {
+    createUser:(username, password, first, last, email) => {
         return fetch(`/api/users`, {
             method: "post",
             headers: {
@@ -168,7 +168,10 @@ export default {
             },
             body: JSON.stringify({
                 username: username,
-                password: password
+                password: password,
+                first: first,
+                last: last,
+                email: email
             })
         }).then(res => {
             if(!res.ok) {
