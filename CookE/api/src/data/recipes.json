@@ -1,0 +1,55 @@
+[
+    {
+        "id": "1",
+        "name": "Simple Salad",
+        "ingredients": [
+            {
+                "ingredient": "Mixed Greens",
+                "amount": 5,
+                "unit": "cups"
+            },
+            {
+                "ingredient": "Olive Oil",
+                "amount": 0.25,
+                "unit": "cups"
+            },
+            {
+                "ingredient": "salt",
+                "amount": 1,
+                "unit": "tsp"
+            }
+        ],
+        "steps": [
+            "Place mixed greens into a bowl",
+            "Pour olive oil and salt into bowl",
+            "Mix thoroughly"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Taco Meat",
+        "ingredients": [
+            {
+                "ingredient": "Ground beef",
+                "amount": 1,
+                "unit": "lb"
+            },
+            {
+                "ingredient": "Water",
+                "amount": 0.75,
+                "unit": "cups"
+            },
+            {
+                "ingredient": "Taco Seasoning",
+                "amount": 0.25,
+                "unit": "cup"
+            }
+        ],
+        "steps": [
+            "Brown ground beef in a pan for 6-7 minutes.  Break up throughout",
+            "Drain oil",
+            "Pour in water and seasoning.  Raise heat until boil",
+            "Lower heat, let simmer while stirring occasionally"
+        ]
+    }
+]

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="/js/viewrecipescript.js" type="module"></script>
+    <script defer src="/js/common.js" type="module"></script>
+
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="bg-body-tertiary">
+    <nav class="navbar navbar-expand bg-primary">
+        <div class="container">
+            <div class="col-1">
+                <img src="/images/CookE_logo_nav.png" class="float-start w-75 d-none d-md-block">
+                <img src="/images/CookE_logo_nav.png" class="float-start w-100 d-md-none">
+            </div>
+            <h1 class="float-start col-1 d-none d-md-block text-white">CookE</h1>
+            <ul class="navbar-nav justify-content-end col-10">
+                <li class="nav-item">
+                    <a href="/recipelist" class="text-decoration-none"><button class="nav-link text-white btn btn-primary">Recipes</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/shoppinglist" class="text-decoration-none"><button class="nav-link text-white btn btn-primary">Shopping List</button></a>
+                </li>
+                <li class="nav-item">
+                     <button class="nav-link text-white btn btn-primary">Account</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link text-white btn btn-primary logout">Log Out</button>
+               </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="py-3 recipe-name"></h1>
+        </div>
+        <div class="row bg-body">
+            <div class="col-lg-6 px-3 border border-5">
+                <h4 class="mt-2">Ingredients</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">Ingredient</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col" class="text-center">Shopping List</th>
+                        </tr>
+                      </thead>
+                      <tbody class="ingredients">
+                        <!-- Recipe ingredients to be added here -->
+                      </tbody>  
+                </table>
+            </div>
+            <div class="col-lg-6 px-3 border border-5">
+                <h4 class="mt-2">Steps</h4>
+                <ol class="steps">
+                    <!-- Recipe iteps here (include py-3 class)-->
+                </ol>
+            </div>
+        </div>
+        <div class="row justify-content-center my-5">
+            <div class="col-lg-4">
+                <button class="my-2 text-white form-control text-center edit-recipe btn btn-primary">Edit Recipe</button>
+            </div>
+            <div class="col-lg-4">
+                <button class="my-2 text-white form-control text-center delete-recipe btn btn-primary">Delete Recipe</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+#shoppinglist {
+    overflow-y: scroll;
+}
+
+#shoppingcontainer {
+    height: 65%;
+}

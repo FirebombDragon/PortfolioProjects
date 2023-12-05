@@ -1,0 +1,15 @@
+#recipelist {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+#recipelist > a > button {
+    width: 100%;
+    height: auto;
+}
+#searchbar {
+    width: 100%;
+}
+#recipelistcontainer {
+    height: 60%;
+}
