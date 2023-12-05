@@ -1,2 +1,8 @@
+# CoffeeMaker
 *.class
 target/
+
+# CookE and Howler
+node_modules
+CookE/database/data 
+.env
