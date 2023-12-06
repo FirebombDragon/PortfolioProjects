@@ -54,7 +54,7 @@ Our caching strategy is a hybrid approach.  For static resources, such as html a
 | DELETE | `/users/current/shopping` | Clears the current user's shopping list |
 
 ### Database ER Diagram
-![ER Diagram](https://github.ncsu.edu/engr-csc342/csc342-2023Fall-GroupQ/blob/master/Milestone2/diagrams/Milestone%202%20ER%20Diagram.png)
+![ER Diagram](https://github.com/FirebombDragon/PortfolioProjects/blob/main/CookE/diagrams/Milestone%202%20ER%20Diagram.png)
 
 ### Individual team member contributions for entire project
 <b><ins>Milestone 1:</ins></b><br>
