@@ -10,7 +10,7 @@ This system consists of two types of files.  The client files hold bits of infor
 <b>Unsupported Client:</b> The client which doesn't have proper information needed to make requests.  The server and other clients should ignore requests made by this client.<br>
 
 ### Requests
-<b>GET:</b> When called, the client will connect with another client to retrieve RFC information.
-<b>ADD:</b> When called, the client will connect with the server to add a reference to an RFC to the server.
-<b>LOOKUP:</b> When called, the client will connect with the server to search for an RFC recognized by the server.
-<b>LIST:</b> When called, the client will connect with the server to get all RFC references recognized by the server.
+<b>GET:</b> When called, the client will connect with another client to retrieve RFC information.<br>
+<b>ADD:</b> When called, the client will connect with the server to add a reference to an RFC to the server.<br>
+<b>LOOKUP:</b> When called, the client will connect with the server to search for an RFC recognized by the server.<br>
+<b>LIST:</b> When called, the client will connect with the server to get all RFC references recognized by the server.<br>
