@@ -1,5 +1,4 @@
 # Cook-E
-## Group Q: Final Project
 
 ### Features
 Users can create accounts and log in to our application.  After logging in, they will see a list of recipes they have created.  They can view the details of these recipes to see the ingredients and instructions.  Users are able to edit their own recipes and create new ones.  When viewing a recipe, users can add ingredients from those recipes to a shopping list.  When viewing their shopping list, users are able to check off items as they purchase them.  Users can also view information about their account, such as their name and email.
@@ -20,18 +19,6 @@ Users can navigate between Recipe List, Shopping List, and Account pages using t
 
 ### Offline Functionality
 After a user has visited a page while online, they will be able to revisit that page if they go offline.  The shopping list page is fetched when the user logs in, so even if the user were to lose connection before visiting this page, they will still be able to see this list.  If an offline user attempts to visit another page that has not been visited previously, they will be redirected to a specific offline page.
-
-### Implementation Status
-| Page | Progress | Wireframe |
-|------|----------|-----------|
-| Login | ✔ |  |
-| New User | ✔ | |
-| Recipe List | ✔ | |
-| Shopping List | ✔ | |
-| View Recipe | ✔ | |
-| Add Recipe | ✔ | |
-| Edit Recipe | ✔ | |
-| Account | ✔ | |
 
 ### Caching Strategy
 Our caching strategy is a hybrid approach.  For static resources, such as html and javascript files, we utilize a cache-first strategy.  Since these files are unlikely to change as a user uses our application, it is more efficient to store these requests in the cache for easier, repeated access.  For calls to our API, we utilize a netwrok-first strategy.  Since the data for our application is likely to change frequently as a user creates, edits, and deletes recipes and shopping list items, it requires that the system make calls to the API over the network to obtain the most recent data.
@@ -55,27 +42,6 @@ Our caching strategy is a hybrid approach.  For static resources, such as html a
 
 ### Database ER Diagram
 ![ER Diagram](https://github.com/FirebombDragon/PortfolioProjects/blob/main/CookE/diagrams/Milestone%202%20ER%20Diagram.png)
-
-### Individual team member contributions for entire project
-<b><ins>Milestone 1:</ins></b><br>
-<b>Robbie:</b> Responsible for viewrecipe.html, addrecipe.html, and editrecipe.html, as well as any associated static files (javascript or css) and API endpoints.<br>
-<b>Nikolaus:</b> Responsible for recipelist.html and shoppinglist.html, as well as any associated static files (javascript or css) and API endpoints.<br>
-<b>Arjun:</b> Responsible for login.html, as well as any associated static files (javascript or css) and API endpoints. Also created wireframes for unimplemented pages.<br>
-All group members worked together on the report and screencast<br>
-
-<b><ins>Milestone 2:</ins></b><br>
-<b>Robbie</b>: Responsible for setting up the database and API routes for getting a recipe, adding a recipe, editing a recipe, logging in (using tokens), and logging out.<br>
-<b>Nikolaus</b>: Responsible for API endpoints relating to getting all recipes and all shopping list routes.<br>
-<b>Arjun</b>: Responsible for login.html and registration.html.<br>
-All group members worked together on the report and screencast<br>
-
-<b><ins>Final Project:</ins></b><br>
-<b>Robbie</b>: Responsible for setting up the service worker and updating the User records in the database (and associated API routes) to store more information to be displayed on the account page<br>
-<b>Nikolaus</b>: Responsible for making the application installable<br>
-<b>Arjun</b>: Responsible for the account page<br>
-All group members worked together on the report and screencast
-
-
 
 
 
