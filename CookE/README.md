@@ -1,5 +1,8 @@
 # Cook-E
 
+![image](https://github.com/FirebombDragon/PortfolioProjects/assets/91640916/5a5c485c-8911-47f7-985e-7aa3f7cdcc0f)
+
+
 ### Features
 Users can create accounts and log in to our application.  After logging in, they will see a list of recipes they have created.  They can view the details of these recipes to see the ingredients and instructions.  Users are able to edit their own recipes and create new ones.  When viewing a recipe, users can add ingredients from those recipes to a shopping list.  When viewing their shopping list, users are able to check off items as they purchase them.  Users can also view information about their account, such as their name and email.
 
