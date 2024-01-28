@@ -1,5 +1,7 @@
 # Howler
 
+![image](https://github.com/FirebombDragon/PortfolioProjects/assets/91640916/658a1321-d104-4132-9e9b-a30fa4012ea9)
+
 ### Features
 Users can create accounts and log in to the application.  After logging in, they will see all "howls" from all users that they follow.  The user can use the textbox and Howl button to make their own howls, which will be shared with all users that follow them.  The user can also click other users' names to check their profiles, including all users they follow as well as all of their "howls".  The user can then click their name to change back to their home page.
 
