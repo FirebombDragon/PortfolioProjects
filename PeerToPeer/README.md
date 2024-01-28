@@ -1,8 +1,6 @@
 # Peer To Peer System
 
 ![image](https://github.com/FirebombDragon/PortfolioProjects/assets/91640916/7a0a0d3b-35cf-42c8-a426-6a2298e6fa48)
-![image](https://github.com/FirebombDragon/PortfolioProjects/assets/91640916/d97f6c2d-9110-48b1-bef5-92c8a9bc38a5)
-
 
 ### Features
 This system consists of two types of files.  The client files hold bits of information known as "RFCs", while the server file contains references to the RFCs and what clients hold them.  A client can make a request to either GET an RFC from another client, LOOKUP a specific RFC through the server, LIST all RFCs known to the server, or ADD an RFC reference to the server.
