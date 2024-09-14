@@ -1,0 +1,37 @@
+# Try out the substr function.
+str = "abcdefghijklmnop";
+
+# Try getting the whole string.
+x = substr( str, 0, 16 );
+print x;
+print "\n";
+
+# Just get the first half.
+x = substr( str, 0, 8 );
+print x;
+print "\n";
+
+# Just get the second half.
+x = substr( str, 8, 16 );
+print x;
+print "\n";
+
+# Try getting an empty stubstring.
+x = substr( str, 9, 9 );
+print x;
+print "\n";
+
+# It's ok to have end before start, that's just an empty string.
+x = substr( str, 16, 0 );
+print x;
+print "\n";
+
+# It's OK to ask for characters off the end of the string, we just get
+# the characters that actually exist.
+x = substr( str, -5, 5 );
+print x;
+print "\n";
+
+x = substr( str, 10, 20 );
+print x;
+print "\n";

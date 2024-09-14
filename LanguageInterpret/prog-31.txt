@@ -1,0 +1,25 @@
+# Extra credit test.  See if the concatenation funciton works.
+a = "hello ";
+b = "world!";
+
+msg = a cat b;
+print msg;
+print "\n";
+
+# Try a few concatenations.
+print "a" cat "b" cat "c" cat "\n";
+
+# Try altering the order of execution (doesn't change the final result)
+print ( ( "This" cat " is" ) cat ( " a" cat " test." ) ) cat "\n";
+
+# Try making a big string.
+str = "abc";
+
+i = 0;
+while ( i < 10 ) {
+  str = str cat str;
+  i = i + 1;
+}
+
+print str;
+print "\n";

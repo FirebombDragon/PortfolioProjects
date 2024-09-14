@@ -1,0 +1,17 @@
+# Extra credit test.  Get the length of some strings.
+a = strlen( "abc" );
+
+print a;
+print "\n";
+
+b = strlen( "This is a test of a longer string." );
+
+print b;
+print "\n";
+
+# You can take the length of an empty string.  It just has a length of zero.
+c = strlen( "" ) + strlen( "" );
+
+print c;
+print "\n";
+

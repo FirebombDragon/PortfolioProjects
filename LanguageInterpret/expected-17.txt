@@ -1,0 +1,1 @@
+Good.  It looks like || does short-circuiting

@@ -1,0 +1,30 @@
+# Check the behavior of &&, with other values for true (not just 1)
+a = 0;
+b = 100;
+c = "true";
+d = -55;
+
+# These two will evaluate to 0 (false)
+
+print a && b;
+print "\n";
+
+print a && c;
+print "\n";
+
+# The rest of these should all evaluate to 1 (true)
+
+print b && c;
+print "\n";
+
+print c && d;
+print "\n";
+
+print d && b;
+print "\n";
+
+# You can use && as part of any arithmetic expression.  It evaluates
+# to 0 or 1.  This is the example shown in the assignment.
+x = 25;
+print 5 * 7 && x;
+print "\n";

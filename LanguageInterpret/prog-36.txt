@@ -1,0 +1,17 @@
+# See about type cecking for substr.
+str = "this is a test string.";
+
+i = 5;
+j = 10;
+k = 15;
+
+# Try out the expected types.
+print substr( str, i, j );
+print "\n";
+
+# Now, try a bad type for the first parameter.
+print substr( k, i, j );
+print "\n";
+
+
+print "This should not get printed\n";

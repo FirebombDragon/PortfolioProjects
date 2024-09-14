@@ -1,0 +1,15 @@
+# This checks for short-circuiting of ||.
+a = 1;
+
+flag = 0;
+
+# b isn't defined, but short-circuiting will prevent it from
+# being evaluated.
+if ( a || b )
+   flag = 1;
+
+if ( flag == 1 )
+   print "Good.  It looks like || does short-circuiting\n";
+
+if ( flag == 0 )
+   print "This message should not get printed\n";

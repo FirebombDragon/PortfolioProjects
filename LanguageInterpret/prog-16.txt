@@ -1,0 +1,32 @@
+# Check the behavior of ||, with other values for true (not just 1)
+a = 0;
+b = 100;
+c = "true";
+d = -55;
+e = 0;
+
+# These first two should be false.
+
+print a || e;
+print "\n";
+
+print a || a;
+print "\n";
+
+# The rest of these should all evaluate to 1 (true)
+
+print a || b;
+print "\n";
+
+print b || c;
+print "\n";
+
+print c || d;
+print "\n";
+
+print d || e;
+print "\n";
+
+print d || b;
+print "\n";
+

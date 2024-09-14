@@ -1,0 +1,35 @@
+# Strings have to be able to perform the same basic operations as any
+# type of value.
+
+# Strings can print themselves.
+
+print "Testing";
+print " 123";
+print "\n";
+
+# Strings can be compared.
+
+print "\n";
+print "Comparing \"abc\" with \"abc\"\n";
+print "abc" == "abc";
+print "\n";
+
+print "\n";
+print "Comparing \"abc\" with \"xyz\"\n";
+print "abc" == "xyz";
+print "\n";
+
+print "\n";
+print "Comparing \"abc\" with \"abcd\"\n";
+print "abc" == "abcd";
+print "\n";
+
+print "\n";
+print "Comparing \"test\" with 1234\n";
+print "test" == 1245;
+print "\n";
+
+print "\n";
+print "Comparing \"1234\" with 1234 (should not be equal)\n";
+print "1234" == 1245;
+print "\n";

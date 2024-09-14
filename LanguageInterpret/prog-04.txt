@@ -1,0 +1,53 @@
+# Try out the various expression types.
+# The output is easier to read if we have support for strings.
+# That lets us print a newline between tests.
+
+# Try the four arithmetic operations.
+print 1 + 2;
+print "\n";
+
+print 5 - 2;
+print "\n";
+
+print 25 * 9;
+print "\n";
+
+print 75 / 9;
+print "\n";
+
+# Our language doesn't enforce precedence.  You just get left-to-right
+# evaluation.
+print "\n";
+
+print 1 + 2 * 3;
+print "\n";
+
+print 8 * 3 - 9 / 3;
+print "\n";
+
+# You can use parentheses to force evaluation order you need.
+print "\n";
+
+print 1 + ( 2 * 3 );
+print "\n";
+
+print ( 8 * 3 ) - ( 9 / 3 );
+print "\n";
+
+# Try the comparison operations.
+print "\n";
+
+print 25 < 27;
+print "\n";
+
+print 102 < 102;
+print "\n";
+
+print 86 < -15;
+print "\n";
+
+print 1001 == 1001;
+print "\n";
+
+print 1001 == 1002;
+print "\n";

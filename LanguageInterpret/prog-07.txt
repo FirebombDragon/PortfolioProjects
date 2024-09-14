@@ -1,0 +1,35 @@
+# You can have as many variables as you need.
+x = 5;
+y=10;
+x2 = 15;
+
+print x;
+print "\n";
+
+print y;
+print "\n";
+
+print x2;
+print "\n";
+
+# You can change the value of a variable after you set it.
+x = 20;
+print x;
+print "\n";
+
+# You can use a variable as part of a larger expression.
+z = x + y;
+print z;
+print "\n";
+
+print x+y+(z*2);
+print "\n";
+
+# Variable names are case sensitive.
+x = "abc";
+X = "XYZ";
+print x;
+print "\n";
+
+print X;
+print "\n";

@@ -1,0 +1,15 @@
+# See about type cecking for strlen.
+str = "abc";
+
+i = 5;
+
+# It's OK to ask the length of a string.
+print strlen( str );
+print "\n";
+
+# But you can't do this with an int value.
+print strlen( i );
+print "\n";
+
+
+print "This should not get printed\n";

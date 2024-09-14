@@ -1,0 +1,25 @@
+# Test of error detection for undefined variables.
+  
+# Define a few variables.
+a=20;
+b=30;
+c=40;
+e=60;
+
+# Print each of them.
+print a;
+print "\n";
+
+print b;
+print "\n";
+
+print c;
+print "\n";
+
+# This will fail since d isn't defined.
+print d;
+print "\n";
+
+# and we'll never make it to this line.
+print e;
+print "\n";

@@ -1,0 +1,16 @@
+# A program is just a sequence of statements.
+print 1;
+
+# So, at the top level, you don't a compound statement
+# to contain a sequence of statements.
+print 2;
+
+# But, you can use a compound statement anywhere, to make a sequence
+# of statements that are parsed as just one statement.
+{
+  print 3;
+  print 4;
+}
+
+# It would be nice to have spaces between these numbers, or a newline
+# at the end.  That will require strings (a few test inptus later).

@@ -1,0 +1,11 @@
+# variables don't have types, so you can store an int if you need to.
+myVar = 25;
+
+print myVar;
+print "\n";
+
+# Then, you can use the same variable to hold a string.
+myVar = "word";
+
+print myVar;
+print "\n";

@@ -1,0 +1,15 @@
+# By changing and testing the value of a variable, we can run a loop.
+
+x = 0;
+
+# The while statement just contains one statement in the body, but
+# if we make it a compound statement, then we can put as much as we
+# want (just like in C or Java)
+while ( x < 1000 ) {
+  # Print the value of x
+  print x;
+  print "\n";
+  
+  # Then, increment it.
+  x = x + 1;
+}

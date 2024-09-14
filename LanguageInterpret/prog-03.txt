@@ -1,0 +1,3 @@
+# In addition to integer falues, our language supports strings.
+# Here, we're printing out a string.
+print "Hello World\n";

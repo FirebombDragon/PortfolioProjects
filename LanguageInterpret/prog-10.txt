@@ -1,0 +1,36 @@
+# trying out assignment with other arithmetic operators.
+
+a = 1;
+b = 25;
+c = 75;
+d = 100;
+
+# Addition
+b = b + 1;
+print b;
+print "\n";
+
+# Subtraction
+b = b - 1;
+print b;
+print "\n";
+
+# Multiplicaton
+x = b * c;
+print x;
+print "\n";
+
+# Division
+y = d / b;
+print y;
+print "\n";
+
+# Some equality tests.
+x = b * 3;
+if ( x == c ) {
+   print "x and c are equal\n";
+}
+
+if ( ( 2 * b ) == ( c - b ) ) {
+   print "2 * b is equal to c - b\n";
+}

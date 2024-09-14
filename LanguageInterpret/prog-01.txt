@@ -1,0 +1,6 @@
+# A program containing just one statement, one that
+# prints a literal value.  Nothing fancy yet.
+print 123;
+
+# Ideally, we would print a newline after this, but we need strings
+# to be able to do that.

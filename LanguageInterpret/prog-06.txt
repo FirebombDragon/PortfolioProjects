@@ -1,0 +1,6 @@
+# You can set the value of a variable using an assignment.
+x = 5;
+
+# Then, you can access the value of that variable.
+print x;
+print "\n";

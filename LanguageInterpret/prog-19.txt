@@ -1,0 +1,31 @@
+# Program to report prime numbers.
+
+# Value to check
+val = 2;
+
+# Check up to a value of 1000
+while ( val < 1001 ) {
+  # True if we find a factor.
+  fflag = 0;
+
+  f = 2;
+  # There are more efficient ways to do this test, but this way uses
+  # the && and || operators
+  while ( ( 1 - fflag ) && ( ( ( f * f ) < val ) ||
+                             ( ( f * f ) == val ) ) ) {
+    # See if f evenly divides val.
+    q = val / f;
+    if (  ( q * f ) == val )
+      fflag = 1;
+    f = f + 1;
+  }
+
+  # Print the current value if it's prime.
+  if ( 1 - fflag ) {
+    print val;
+    print "\n";
+  }
+
+  # Move on to the next value.
+  val = val + 1;
+}

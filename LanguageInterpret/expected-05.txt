@@ -1,0 +1,16 @@
+Testing 123
+
+Comparing "abc" with "abc"
+1
+
+Comparing "abc" with "xyz"
+0
+
+Comparing "abc" with "abcd"
+0
+
+Comparing "test" with 1234
+0
+
+Comparing "1234" with 1234 (should not be equal)
+0

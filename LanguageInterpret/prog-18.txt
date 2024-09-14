@@ -1,0 +1,16 @@
+# Print out a triangle of * characters.
+
+# Print ten rows.
+i = 1;
+while ( i < 11 ) {
+  # On each row, print i stars
+  j = 0;
+  while ( j < i ) {
+    print "*"; 
+    j = j + 1;
+  }
+
+  # Print a newline at the end of each row.
+  print "\n";
+  i = i + 1; 
+}

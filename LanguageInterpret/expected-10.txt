@@ -1,0 +1,6 @@
+26
+25
+1875
+4
+x and c are equal
+2 * b is equal to c - b

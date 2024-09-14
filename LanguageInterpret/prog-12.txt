@@ -1,0 +1,22 @@
+# Check the behavior of &&, with values of 1 and 0 for true and false.
+a = 1;
+b = 1;
+c = 0;
+d = 0;
+
+# This should be true
+
+print a && b;
+print "\n";
+
+# The rest of these should be false.
+
+print a && c;
+print "\n";
+
+print d && a;
+print "\n";
+
+print c && d;
+print "\n";
+

@@ -1,0 +1,24 @@
+# A string to work with:
+src = "!dlroW olleH";
+
+# Build a reverse copy fo this string.
+result = "";
+
+# Loop over every character.
+len = strlen( src );
+idx = 0;
+while ( idx < len ) {
+
+  # Get the next character.
+  ch = substr( src, idx, idx + 1 );
+
+  # Add this next character to the result (at the front)
+  result = ch cat result;
+
+  # Advance to the next character.
+  idx = idx + 1;
+}
+
+# Print the result
+print result;
+print "\n";
